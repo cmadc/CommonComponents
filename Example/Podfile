@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'CommonComponents_Example' do
+  pod 'CommonComponents', :path => '../'
+
+  target 'CommonComponents_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
