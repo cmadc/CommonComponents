@@ -29,9 +29,18 @@ TODO: Add long description of the pod here.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
-
   s.source_files = 'CommonComponents/Classes/**/*'
   
+  
+  s.dependency 'SDWebImage', '~> 4.3.3'
+  s.dependency 'SDWebImage/GIF'
+  s.dependency 'FLAnimatedImage'
+  s.dependency 'DACircularProgress'
+  s.frameworks = 'UIKit'
+
+
+  s.public_header_files = 'CommonComponents/Classes/ToolsHeader.h'
+ 
   # s.resource_bundles = {
   #   'CommonComponents' => ['CommonComponents/Assets/*.png']
   # }
@@ -39,4 +48,11 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+  # s
+  #import <SDWebImage/UIImageView+WebCache.h>
+#import <SDWebImage/UIImage+GIF.h>
+#import <SDWebImage/UIImage+MultiFormat.h>
+#import <FLAnimatedImage/FLAnimatedImage.h>
+#import <SDWebImage/FLAnimatedImageView+WebCache.h>
+#import <DACircularProgress/DACircularProgressView.h>
 end

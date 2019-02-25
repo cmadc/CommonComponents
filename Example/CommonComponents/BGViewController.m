@@ -7,7 +7,7 @@
 //
 
 #import "BGViewController.h"
-
+#import "ToolsHeader.h"
 @interface BGViewController ()
 
 @end
@@ -18,6 +18,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    self.view.backgroundColor = [UIColor colorWithHexString:@"333333"];
 }
 
 - (void)didReceiveMemoryWarning

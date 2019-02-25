@@ -10,7 +10,7 @@
 #endif
 #endif
 
-#import "UIColor+HexColor.h"
+#import "ToolsHeader.h"
 
 FOUNDATION_EXPORT double CommonComponentsVersionNumber;
 FOUNDATION_EXPORT const unsigned char CommonComponentsVersionString[];
