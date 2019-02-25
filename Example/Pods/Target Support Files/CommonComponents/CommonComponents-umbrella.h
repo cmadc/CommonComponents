@@ -10,6 +10,10 @@
 #endif
 #endif
 
+#import "UIColor+HexColor.h"
+#import "UIFont+AppFont.h"
+#import "UIView+Frame.h"
+#import "TSLabel.h"
 #import "ToolsHeader.h"
 
 FOUNDATION_EXPORT double CommonComponentsVersionNumber;

@@ -247,6 +247,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = liujiaojiao;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = 6HBDCWRG56;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -491,6 +494,7 @@
 			baseConfigurationReference = 6DECA52815F9C50D2BE3B1D6 /* Pods-CommonComponents_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6HBDCWRG56;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CommonComponents/CommonComponents-Prefix.pch";
 				INFOPLIST_FILE = "CommonComponents/CommonComponents-Info.plist";
@@ -506,6 +510,7 @@
 			baseConfigurationReference = 46E5E1247FA352539238BC49 /* Pods-CommonComponents_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6HBDCWRG56;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CommonComponents/CommonComponents-Prefix.pch";
 				INFOPLIST_FILE = "CommonComponents/CommonComponents-Info.plist";

@@ -33,6 +33,5 @@
 
     ]
   },
-  "frameworks": "UIKit",
-  "public_header_files": "CommonComponents/Classes/ToolsHeader.h"
+  "frameworks": "UIKit"
 }

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CommonComponents'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = 'CommonComponents'
 
 # This description is used to generate tags and improve search results.
@@ -38,8 +38,6 @@ TODO: Add long description of the pod here.
   s.dependency 'DACircularProgress'
   s.frameworks = 'UIKit'
 
-
-  s.public_header_files = 'CommonComponents/Classes/ToolsHeader.h'
  
   # s.resource_bundles = {
   #   'CommonComponents' => ['CommonComponents/Assets/*.png']
