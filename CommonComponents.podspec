@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CommonComponents'
-  s.version          = '0.0.3'
+  s.version          = '0.0.4'
   s.summary          = 'CommonComponents'
 
 # This description is used to generate tags and improve search results.
@@ -40,8 +40,6 @@ TODO: Add long description of the pod here.
   s.dependency 'DACircularProgress'
   s.frameworks = 'UIKit'
 
-
- 
   # s.resource_bundles = {
   #   'CommonComponents' => ['CommonComponents/Assets/*.png']
   # }
@@ -50,10 +48,4 @@ TODO: Add long description of the pod here.
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
   # s
-  #import <SDWebImage/UIImageView+WebCache.h>
-#import <SDWebImage/UIImage+GIF.h>
-#import <SDWebImage/UIImage+MultiFormat.h>
-#import <FLAnimatedImage/FLAnimatedImage.h>
-#import <SDWebImage/FLAnimatedImageView+WebCache.h>
-#import <DACircularProgress/DACircularProgressView.h>
 end

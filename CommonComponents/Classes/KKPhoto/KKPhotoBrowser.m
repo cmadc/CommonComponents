@@ -25,7 +25,6 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 #define KKStatusBarHeight           (KKIPHONE_X ? 44.0 : 20.0)
 
 
-
 @interface KKPhotoBrowser ()<UIScrollViewDelegate,KKPhotoBrowserImageViewDelegate>
 
 @property(nonatomic,strong)UIScrollView *scrollView;
@@ -83,13 +82,6 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
     _scrollView.pagingEnabled = YES;
     [self.view addSubview:_scrollView];
     [self.view addSubview:self.naviView];
-    
-    [self.naviView mas_makeConstraints:^(MASConstraintMaker *make) {
-       
-        make.top.left.right.offset(0);
-        make.bottom.equalTo(self.navigationController.navigationBar.mas_bottom);
-    }];
-    
     [self.view addSubview:self.countLab];
     [self.view addSubview:self.totalCountLab];
     self.totalCountLab.text = [NSString stringWithFormat:@"/%@",@(self.imageCount)];
