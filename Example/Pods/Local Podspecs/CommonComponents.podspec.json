@@ -1,6 +1,6 @@
 {
   "name": "CommonComponents",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "summary": "CommonComponents",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/cmadc/CommonComponents",
@@ -13,13 +13,22 @@
   },
   "source": {
     "git": "https://github.com/cmadc/CommonComponents.git",
-    "tag": "0.0.1"
+    "tag": "0.0.2"
   },
   "platforms": {
     "ios": "8.0"
   },
   "source_files": "CommonComponents/Classes/**/*",
   "dependencies": {
+    "AFNetworking": [
+      "~> 3.2.1"
+    ],
+    "YYModel": [
+      "~> 1.0.4"
+    ],
+    "Masonry": [
+
+    ],
     "SDWebImage": [
       "~> 4.3.3"
     ],

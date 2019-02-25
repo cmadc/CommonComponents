@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CommonComponents'
-  s.version          = '0.0.2'
+  s.version          = '0.0.3'
   s.summary          = 'CommonComponents'
 
 # This description is used to generate tags and improve search results.
@@ -31,12 +31,15 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '8.0'
   s.source_files = 'CommonComponents/Classes/**/*'
   
-  
+  s.dependency 'AFNetworking', '~> 3.2.1'
+  s.dependency 'YYModel','~> 1.0.4'
+  s.dependency 'Masonry'
   s.dependency 'SDWebImage', '~> 4.3.3'
   s.dependency 'SDWebImage/GIF'
   s.dependency 'FLAnimatedImage'
   s.dependency 'DACircularProgress'
   s.frameworks = 'UIKit'
+
 
  
   # s.resource_bundles = {
