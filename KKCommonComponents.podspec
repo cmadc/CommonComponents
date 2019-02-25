@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'CommonComponents'
+  s.name             = 'KKCommonComponents'
   s.version          = '0.0.4'
   s.summary          = 'CommonComponents'
 
