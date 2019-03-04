@@ -2,12 +2,14 @@ use_frameworks!
 
 platform :ios, '8.0'
 
+pod 'AFNetworking', '~> 3.2.1'
+pod 'YYModel'
+pod 'Masonry'
+pod 'SDWebImage', '~> 4.3.3'
+pod 'SDWebImage/GIF'
+pod 'FLAnimatedImage'
+pod 'DACircularProgress'
+
 target 'CommonComponents_Example' do
-  pod 'CommonComponents', :path => '../'
 
-  target 'CommonComponents_Tests' do
-    inherit! :search_paths
-
-    
-  end
 end

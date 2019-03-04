@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'KKCommonComponents'
-  s.version          = '0.0.4'
+  s.version          = '0.0.5'
   s.summary          = 'CommonComponents'
 
 # This description is used to generate tags and improve search results.
@@ -22,15 +22,97 @@ TODO: Add long description of the pod here.
                        DESC
 
   s.homepage         = 'https://github.com/cmadc/CommonComponents'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'liujiaojiao' => 'jiaojiao.liu@phicomm.com' }
   s.source           = { :git => 'https://github.com/cmadc/CommonComponents.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
-  s.source_files = 'CommonComponents/Classes/**/*'
-  
+
+  s.public_header_files = 'KKCommonComponents/KKCommonComponents.h'
+  s.source_files = 'KKCommonComponents/KKCommonComponents.h'
+
+  s.subspec 'KKFont' do |ss|
+
+    ss.public_header_files = 'KKCommonComponents/Font/*.h'
+    ss.source_files = 'KKCommonComponents/Font/*.{h,m}'
+
+  end
+
+  s.subspec 'KKLabel' do |ss|
+
+    ss.public_header_files = 'KKCommonComponents/KKLabel/*.h'
+    ss.source_files = 'KKCommonComponents/KKLabel/*.{h,m}'
+
+  end
+
+  s.subspec 'KKModel' do |ss|
+
+    ss.public_header_files = 'KKCommonComponents/model/*.h'
+    ss.source_files = 'KKCommonComponents/model/*.{h,m}'
+
+  end
+
+  s.subspec 'Reachability' do |ss|
+
+    ss.public_header_files = 'KKCommonComponents/Reachability/*.h'
+    ss.source_files = 'KKCommonComponents/Reachability/*.{h,m}'
+
+  end
+
+  s.subspec 'KKAttributeString' do |ss|
+
+    ss.public_header_files = 'KKCommonComponents/KKAttributeString/*.h'
+    ss.source_files = 'KKCommonComponents/KKAttributeString/*.{h,m}'
+    ss.dependency 'KKCommonComponents/KKFont'
+
+  end
+
+  s.subspec 'KKButton' do |ss|
+
+    ss.public_header_files = 'KKCommonComponents/Button/*.h'
+    ss.source_files = 'KKCommonComponents/Button/*.{h,m}'
+
+  end
+
+  s.subspec 'KKView' do |ss|
+
+    ss.public_header_files = 'KKCommonComponents/View/*.h'
+    ss.source_files = 'KKCommonComponents/View/*.{h,m}'
+
+  end
+
+  s.subspec 'KKColor' do |ss|
+
+    ss.public_header_files = 'KKCommonComponents/Color/*.h'
+    ss.source_files = 'KKCommonComponents/Color/*.{h,m}'
+
+  end
+
+  s.subspec 'KKWebImage' do |ss|
+
+    ss.public_header_files = 'KKCommonComponents/KKWebImage/*.h'
+    ss.source_files = 'KKCommonComponents/KKWebImage/*.{h,m}'
+
+  end
+
+  s.subspec 'KKPhoto' do |ss|
+
+    ss.public_header_files = 'KKCommonComponents/KKPhoto/*.h'
+    ss.source_files = 'KKCommonComponents/KKPhoto/*.{h,m}'
+    ss.dependency 'KKCommonComponents/KKColor'
+    ss.dependency 'KKCommonComponents/KKView'
+
+  end
+   s.subspec 'KKBanner' do |ss|
+
+    ss.public_header_files = 'KKCommonComponents/KKBanner/*.h'
+    ss.source_files = 'KKCommonComponents/KKBanner/*.{h,m}'
+    ss.dependency 'KKCommonComponents/KKColor'
+    ss.dependency 'KKCommonComponents/KKView'
+    ss.dependency 'KKCommonComponents/KKWebImage'
+
+  end 
+
   s.dependency 'AFNetworking', '~> 3.2.1'
   s.dependency 'YYModel','~> 1.0.4'
   s.dependency 'Masonry'
@@ -38,14 +120,5 @@ TODO: Add long description of the pod here.
   s.dependency 'SDWebImage/GIF'
   s.dependency 'FLAnimatedImage'
   s.dependency 'DACircularProgress'
-  s.frameworks = 'UIKit'
 
-  # s.resource_bundles = {
-  #   'CommonComponents' => ['CommonComponents/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
-  # s
 end

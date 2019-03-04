@@ -14,14 +14,6 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - CommonComponents (0.0.2):
-    - AFNetworking (~> 3.2.1)
-    - DACircularProgress
-    - FLAnimatedImage
-    - Masonry
-    - SDWebImage (~> 4.3.3)
-    - SDWebImage/GIF
-    - YYModel (~> 1.0.4)
   - DACircularProgress (2.3.1)
   - FLAnimatedImage (1.0.12)
   - Masonry (1.1.0)
@@ -34,10 +26,16 @@ PODS:
   - YYModel (1.0.4)
 
 DEPENDENCIES:
-  - CommonComponents (from `../`)
+  - AFNetworking (~> 3.2.1)
+  - DACircularProgress
+  - FLAnimatedImage
+  - Masonry
+  - SDWebImage (~> 4.3.3)
+  - SDWebImage/GIF
+  - YYModel
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - AFNetworking
     - DACircularProgress
     - FLAnimatedImage
@@ -45,19 +43,14 @@ SPEC REPOS:
     - SDWebImage
     - YYModel
 
-EXTERNAL SOURCES:
-  CommonComponents:
-    :path: "../"
-
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  CommonComponents: 40109ca29e5d4d57cb667074fc59b9d929287de0
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: d6a913d84789cbb119908cbdde2ddf6b08d1f7c5
+PODFILE CHECKSUM: 5bdc1945d1323c6ffba00916e2c2d8cfde69845d
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3
