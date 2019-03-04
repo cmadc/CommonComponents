@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'KKCommonComponents'
-  s.version          = '0.0.5'
+  s.version          = '0.0.6'
   s.summary          = 'CommonComponents'
 
 # This description is used to generate tags and improve search results.
