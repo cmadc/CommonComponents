@@ -15,3 +15,4 @@
 + (CGSize)autoSizeLabNoLineSpacing:(CGSize)size  attString:(NSAttributedString*)string;
 
 @end
+

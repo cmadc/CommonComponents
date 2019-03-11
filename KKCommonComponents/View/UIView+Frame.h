@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-#define KKPHONE_WIDTH     [[UIScreen mainScreen] bounds].size.width
-#define KKPHONE_HEIGHT    [[UIScreen mainScreen] bounds].size.height
 
 #define KKIPHONE_X \
 ({BOOL isPhoneX = NO;\

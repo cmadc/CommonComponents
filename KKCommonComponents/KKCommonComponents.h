@@ -8,7 +8,7 @@
 
 #ifndef KKCommonComponentsHeader_h
 #define KKCommonComponentsHeader_h
-
+#import "KKMacro.h"
 #import "UIFont+AppFont.h"
 #import "UIColor+HexColor.h"
 #import "UIView+Frame.h"

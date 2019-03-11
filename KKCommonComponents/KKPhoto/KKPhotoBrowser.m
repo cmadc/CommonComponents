@@ -11,7 +11,7 @@
 #import <Masonry/Masonry.h>
 #import "UIColor+HexColor.h"
 #import "UIView+Frame.h"
-
+#import "KKMacro.h"
 
 #define KKPhotoBrowserImageViewMargin 10
 

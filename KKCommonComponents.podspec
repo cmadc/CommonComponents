@@ -31,6 +31,13 @@ TODO: Add long description of the pod here.
   s.public_header_files = 'KKCommonComponents/KKCommonComponents.h'
   s.source_files = 'KKCommonComponents/KKCommonComponents.h'
 
+  s.subspec 'KKMacro' do |ss|
+
+    ss.public_header_files = 'KKCommonComponents/KKMacro/*.h'
+    ss.source_files = 'KKCommonComponents/KKMacro/*.{h,m}'
+
+  end
+
   s.subspec 'KKFont' do |ss|
 
     ss.public_header_files = 'KKCommonComponents/Font/*.h'
@@ -101,6 +108,7 @@ TODO: Add long description of the pod here.
     ss.source_files = 'KKCommonComponents/KKPhoto/*.{h,m}'
     ss.dependency 'KKCommonComponents/KKColor'
     ss.dependency 'KKCommonComponents/KKView'
+    ss.dependency 'KKCommonComponents/KKMacro'
 
   end
    s.subspec 'KKBanner' do |ss|
