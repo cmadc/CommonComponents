@@ -24,7 +24,7 @@ TODO: Add long description of the pod here.
   s.homepage         = 'https://github.com/cmadc/CommonComponents'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'liujiaojiao' => 'jiaojiao.liu@phicomm.com' }
-  s.source           = { :git => 'https://github.com/cmadc/CommonComponents.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/cmadc/CommonComponents.git',:branch => 'master' }
 
   s.ios.deployment_target = '8.0'
 
