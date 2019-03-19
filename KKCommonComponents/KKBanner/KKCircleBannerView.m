@@ -305,6 +305,9 @@
         _pageLabel.textColor = KKColorWithHex(@"#333333");
         _pageLabel.font = [UIFont systemFontOfSize:12];
         _pageLabel.textAlignment  = NSTextAlignmentCenter;
+        _pageLabel.backgroundColor = [UIColor colorWithWhite:1 alpha:0.5];
+        _pageLabel.layer.masksToBounds = YES;
+
     }
     return _pageLabel;
 }
