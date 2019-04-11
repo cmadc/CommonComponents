@@ -30,7 +30,7 @@
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
     NSTimeInterval timeInterval = [[NSDate date]timeIntervalSince1970];
-    if (timeInterval-_lastPushTimeInterval<0.3)
+    if ((timeInterval-_lastPushTimeInterval<0.3)&&animated)
     {
         NSLog(@"pushViewController间隔时间太短");
         return;
