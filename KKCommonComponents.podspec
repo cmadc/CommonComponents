@@ -121,6 +121,13 @@ TODO: Add long description of the pod here.
 
   end 
 
+     s.subspec 'KKNavigationController' do |ss|
+
+    ss.public_header_files = 'KKCommonComponents/KKNavigationController/*.h'
+    ss.source_files = 'KKCommonComponents/KKNavigationController/*.{h,m}'
+
+  end 
+
   s.dependency 'AFNetworking', '~> 3.2.1'
   s.dependency 'YYModel','~> 1.0.4'
   s.dependency 'Masonry'
