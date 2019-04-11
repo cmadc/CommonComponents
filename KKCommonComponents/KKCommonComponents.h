@@ -15,6 +15,7 @@
 #import "NSObject+KaKaModel.h"
 #import "UIImageView+KKWebImage.h"
 #import "UIButton+KKWebCache.h"
+#import "KKNavigationController.h"
 
 #import "KKPhotoBrowser.h"
 #import "KKCircleBannerView.h"
