@@ -12,17 +12,17 @@
 
 @implementation UIViewController (KKNavigation)
 
-static BOOL _popRecognizerEnable;
+static BOOL _banPopSlide;
 static id _pushTransition;
 static id _popTransition;
 
-- (void)setPopRecognizerEnable:(BOOL)popRecognizerEnable {
-    NSNumber *t = @(popRecognizerEnable);
-    objc_setAssociatedObject(self, &_popRecognizerEnable, t, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+- (void)setBanPopSlide:(BOOL)popSlide {
+    NSNumber *t = @(popSlide);
+    objc_setAssociatedObject(self, &_banPopSlide, t, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (BOOL)popRecognizerEnable {
-    NSNumber *t = objc_getAssociatedObject(self, &_popRecognizerEnable);
+- (BOOL)banPopSlide {
+    NSNumber *t = objc_getAssociatedObject(self, &_banPopSlide);
     return [t boolValue];
 }
 

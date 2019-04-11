@@ -56,13 +56,6 @@
     return [super popToRootViewControllerAnimated:animated];
 }
 
-// 将要显示控制器
-- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
-    // 判断要显示的控制器是否是自己
-
-}
-
-
 - (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
     
@@ -72,7 +65,7 @@
         {
             navigationController.interactivePopGestureRecognizer.enabled = NO;
         }else {
-            navigationController.interactivePopGestureRecognizer.enabled = viewController.popRecognizerEnable;
+            navigationController.interactivePopGestureRecognizer.enabled = !viewController.banPopSlide;
         }
     }
     if (self.kkViewControllers.count>navigationController.viewControllers.count) {

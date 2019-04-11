@@ -13,18 +13,18 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UIViewController (KKNavigation)
 
 /**
- 设置当前页面是否支持侧滑
+ 设置当前页面是否禁止侧滑
 
- @param popRecognizerEnable popRecognizerEnable
+ @param popSlide popSlide 默认不禁止
  */
-- (void)setPopRecognizerEnable:(BOOL)popRecognizerEnable;
+- (void)setBanPopSlide:(BOOL)popSlide;
 
 /**
- 获取当前页面是否支持侧滑
+ 获取当前页面是否禁止侧滑
 
- @return YES 支持 NO 不支持
+ @return YES 禁止 NO 不禁止
  */
-- (BOOL)popRecognizerEnable;
+- (BOOL)banPopSlide;
 
 /**
     页面移除时调用
