@@ -8,10 +8,12 @@
 
 #import "KKNavigationController.h"
 
-@interface KKNavigationController ()<UINavigationControllerDelegate>
+@interface KKNavigationController ()<UINavigationControllerDelegate, UIGestureRecognizerDelegate>
 
-@property(nonatomic,assign)NSTimeInterval lastPushTimeInterval;
+//@property(nonatomic,assign)NSTimeInterval lastPushTimeInterval;
 @property(nonatomic,strong)NSArray<UIViewController*> *kkViewControllers;
+@property (nonatomic, strong) UIPanGestureRecognizer *popPanGesture;
+@property (nonatomic, strong) id popGestureDelegate;
 
 @end
 
@@ -21,27 +23,47 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.delegate = self;
-    if ([self respondsToSelector:@selector(interactivePopGestureRecognizer)])
+    self.popGestureDelegate = self.interactivePopGestureRecognizer.delegate;
+    SEL action = NSSelectorFromString(@"handleNavigationTransition:");
+    self.popPanGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self.popGestureDelegate action:action];
+    self.popPanGesture.maximumNumberOfTouches = 1;
+    self.interactivePopGestureRecognizer.delegate = self;
+    self.interactivePopGestureRecognizer.enabled = YES;
+}
+
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
+{
+    if ( gestureRecognizer == self.interactivePopGestureRecognizer )
     {
-        self.interactivePopGestureRecognizer.delegate = nil;
+        UIViewController *vc = self.viewControllers.lastObject;
+        //  禁用某些不支持侧滑返回的页面
+        if (self.viewControllers.lastObject.banPopSlide) {
+            return NO;
+        }
+        //  禁用根目录的侧滑手势
+        if ( self.viewControllers.count < 2 || self.visibleViewController == [self.viewControllers objectAtIndex:0] )
+        {
+            return NO;
+        }
     }
+    return YES;
+}
+
+
+//修复有水平方向滚动的ScrollView时边缘返回手势失效的问题
+-(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+    return YES;
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldBeRequiredToFailByGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+    return [gestureRecognizer isKindOfClass:UIScreenEdgePanGestureRecognizer.class];
 }
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
-    NSTimeInterval timeInterval = [[NSDate date]timeIntervalSince1970];
-    if ((timeInterval-_lastPushTimeInterval<0.3)&&animated)
-    {
-        NSLog(@"pushViewController间隔时间太短");
-        return;
-    }
-    _lastPushTimeInterval = timeInterval;
-    if ([self respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
-        self.interactivePopGestureRecognizer.enabled = NO;
-    }
     [super pushViewController:viewController animated:animated];
-    
 }
+
 - (UIViewController *)popViewControllerAnimated:(BOOL)animated{
     
     return [super popViewControllerAnimated:animated];
@@ -58,16 +80,6 @@
 
 - (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
-    
-    if ([navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
-        
-        if (viewController == navigationController.viewControllers[0])
-        {
-            navigationController.interactivePopGestureRecognizer.enabled = NO;
-        }else {
-            navigationController.interactivePopGestureRecognizer.enabled = !viewController.banPopSlide;
-        }
-    }
     if (self.kkViewControllers.count>navigationController.viewControllers.count) {
         for (NSInteger i = self.viewControllers.count; i<self.kkViewControllers.count; i++) {
             [self.kkViewControllers[i] viewDidRemove];
