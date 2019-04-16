@@ -35,7 +35,6 @@
 {
     if ( gestureRecognizer == self.interactivePopGestureRecognizer )
     {
-        UIViewController *vc = self.viewControllers.lastObject;
         //  禁用某些不支持侧滑返回的页面
         if (self.viewControllers.lastObject.banPopSlide) {
             return NO;
