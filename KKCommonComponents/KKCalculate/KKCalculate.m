@@ -1,14 +1,14 @@
 //
-//  Calculate.m
+//  KKCalculate.m
 //  Shopkeeper
 //
 //  Created by CaiMing on 2017/12/15.
 //  Copyright © 2017年 dongyin. All rights reserved.
 //
 
-#import "Calculate.h"
+#import "KKCalculate.h"
 
-@implementation Calculate
+@implementation KKCalculate
 
 
 + (NSString*)amountDisplayCalculate:(NSNumber*)a multiplyingBy:(NSNumber*)b

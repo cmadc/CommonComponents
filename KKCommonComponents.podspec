@@ -128,6 +128,13 @@ TODO: Add long description of the pod here.
 
   end 
 
+     s.subspec 'KKCalculate' do |ss|
+
+    ss.public_header_files = 'KKCommonComponents/KKCalculate/*.h'
+    ss.source_files = 'KKCommonComponents/KKCalculate/*.{h,m}'
+
+  end 
+
   s.dependency 'AFNetworking', '~> 3.2.1'
   s.dependency 'YYModel','~> 1.0.4'
   s.dependency 'Masonry'

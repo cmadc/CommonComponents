@@ -1,5 +1,5 @@
 //
-//  Calculate.h
+//  KKCalculate.h
 //  Shopkeeper
 //
 //  Created by CaiMing on 2017/12/15.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Calculate : NSObject
+@interface KKCalculate : NSObject
 
 + (NSString*)amountDisplayCalculate:(id)a multiplyingBy:(id)b;
 + (NSString*)amountDisplayCalculate:(id)a addBy:(id)b;
