@@ -21,7 +21,6 @@
 #import "KKCircleBannerView.h"
 #import "KKLabel.h"
 #import "Reachability.h"
-#import "Calculate.h"
 
 #endif /* ToolsHeader_h */
 

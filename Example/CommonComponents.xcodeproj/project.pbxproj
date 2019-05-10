@@ -23,7 +23,6 @@
 		3F0BB6C7222D23410059908E /* UIFont+AppFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0BB6B8222D23410059908E /* UIFont+AppFont.m */; };
 		3F2BA517225F278F007CE39A /* UIViewController+KKNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F2BA515225F278F007CE39A /* UIViewController+KKNavigation.m */; };
 		3F2BA518225F278F007CE39A /* KKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F2BA516225F278F007CE39A /* KKNavigationController.m */; };
-		5A0E646D22854AE500555D4D /* KKCalculate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E646B22854AE500555D4D /* KKCalculate.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -89,8 +88,6 @@
 		3F2BA516225F278F007CE39A /* KKNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKNavigationController.m; sourceTree = "<group>"; };
 		3FBF243D2236305900DAF690 /* KKMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKMacro.h; sourceTree = "<group>"; };
 		46E5E1247FA352539238BC49 /* Pods-CommonComponents_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommonComponents_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-CommonComponents_Example/Pods-CommonComponents_Example.release.xcconfig"; sourceTree = "<group>"; };
-		5A0E646B22854AE500555D4D /* KKCalculate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKCalculate.m; sourceTree = "<group>"; };
-		5A0E646C22854AE500555D4D /* KKCalculate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKCalculate.h; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* CommonComponents_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommonComponents_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -147,7 +144,6 @@
 		3F0BB691222D23400059908E /* KKCommonComponents */ = {
 			isa = PBXGroup;
 			children = (
-				5A0E646A22854AE500555D4D /* KKCalculate */,
 				3F2BA512225F278F007CE39A /* KKNavigationController */,
 				3FBF243C2236304900DAF690 /* KKMacro */,
 				3F0BB692222D23400059908E /* KKBanner */,
@@ -289,15 +285,6 @@
 				3FBF243D2236305900DAF690 /* KKMacro.h */,
 			);
 			path = KKMacro;
-			sourceTree = "<group>";
-		};
-		5A0E646A22854AE500555D4D /* KKCalculate */ = {
-			isa = PBXGroup;
-			children = (
-				5A0E646B22854AE500555D4D /* KKCalculate.m */,
-				5A0E646C22854AE500555D4D /* KKCalculate.h */,
-			);
-			path = KKCalculate;
 			sourceTree = "<group>";
 		};
 		6003F581195388D10070C39A = {
@@ -566,7 +553,6 @@
 				3F0BB6C0222D23410059908E /* UIColor+HexColor.m in Sources */,
 				3F0BB6C4222D23410059908E /* Reachability.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
-				5A0E646D22854AE500555D4D /* KKCalculate.m in Sources */,
 				3F0BB6BF222D23410059908E /* UIButton+KKWebCache.m in Sources */,
 				3F2BA517225F278F007CE39A /* UIViewController+KKNavigation.m in Sources */,
 				3F0BB6C1222D23410059908E /* UIView+Frame.m in Sources */,
